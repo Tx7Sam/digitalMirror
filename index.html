@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Mirror</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <video id="mirrorVideo" autoplay playsinline muted></video>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="delayInput">遅延時間: <span id="delayValue">5.0</span>秒</label>
+                <input type="range" id="delayInput" min="0" max="30" step="1" value="5">
+            </div>
+
+            <button id="audioToggle" class="btn">
+                <span class="icon">🔇</span> 音声OFF
+            </button>
+
+            <button id="startBtn" class="btn primary">開始</button>
+        </div>
+
+        <div id="status" class="status">待機中...</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
